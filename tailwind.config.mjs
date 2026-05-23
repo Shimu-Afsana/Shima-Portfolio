@@ -1,6 +1,3 @@
-"use client"
-
-import React, { useEffect, useState } from 'react'
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   darkMode: 'class',
@@ -13,7 +10,6 @@ module.exports = {
 
   theme: {
     extend: {
-
       colors: {
         lightHover: '#b8b3ba',
         darkHover: '#2a004a',
@@ -33,7 +29,6 @@ module.exports = {
       gridTemplateColumns: {
         auto: 'repeat(auto-fit, minmax(200px, 1fr))',
       },
-
     },
   },
 

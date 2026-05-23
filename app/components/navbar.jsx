@@ -4,9 +4,7 @@ import { assets } from '@/assets/assets'
 import Image from 'next/image'
 
 
-const Navbar = ({isDarkMode, setIsDarkMode}) => {
-
-
+const Navbar = () => {
     const [isScroll, setIsScroll] = useState(false)
     const sideMenuRef = useRef();
     const openMenu= ()=>{
@@ -29,7 +27,7 @@ const Navbar = ({isDarkMode, setIsDarkMode}) => {
     return (
     <>
     <div className='fixed top-0 right-0 w-11/12 -z-10 translate-y-[-80%]'>
-        <Image src={assets.header_bg_color} alt='Header Pic'/>
+        <Image src={assets.header_bg_color} alt='header-pic'/>
     </div>
         <nav className={`w-full fixed px-5 -mt-10  lg:px-10 
                 xl:px-[8%] py-4 flex items-center justify-between z-50 ${isScroll ? "bg-white bg-opacity-50 backdrop-blur-lg shadow-sm" : ""}`}>
@@ -48,9 +46,7 @@ const Navbar = ({isDarkMode, setIsDarkMode}) => {
                 
             </ul>
             <div className='flex gap-4'>
-                <button>
-                    <Image onClick={toggleTheme} src={assets.moon_icon} alt='' className='w-6 cursor-pointer' />
-                </button>
+                
                 <a className='hidden lg:flex items-center gap-3 px-10 py-2.5 border border-gray-500 rounded-full ml-4 font-Ovo'href="#contact">Contact <Image src={assets.arrow_icon} alt='arrow-icon' className='w-3'/></a>
                 <button className='block md:hidden' onClick={openMenu}>
                     <Image src={assets.menu_black} alt='' className='w-6' />
